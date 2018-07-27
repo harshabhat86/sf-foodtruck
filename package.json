@@ -1,0 +1,17 @@
+{
+  "name": "foodtruck",
+  "version": "1.0.0",
+  "description": "Find food trucks around SF area",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "lodash": "^4.17.10",
+    "prompt": "^1.0.0",
+    "readline-sync": "^1.4.9",
+    "request": "^2.87.0"
+  }
+}
