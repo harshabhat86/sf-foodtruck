@@ -1,5 +1,4 @@
-var inRange = require('lodash/inRange');
-var sortBy = require('lodash/sortBy');
+var _ = require('lodash');
 var Table = require('cli-table');
 
 module.exports = {
@@ -13,13 +12,13 @@ module.exports = {
   getOpenFoodTrucks:(foodTrucks)=> {
     let time = module.exports.getCurrentTime();
     let foodTrucksOpenNow = foodTrucks.filter(truckInfo => {
-      // intentional != since getDay() returns number and dayorder is string.
+      // intentional usage of "!=" instead of "!==" since getDay() returns number and dayorder is string.
       if (truckInfo.dayorder != new Date().getDay()) {
         return false;
       }
-      return inRange(time, truckInfo.start24.replace(":",""), truckInfo.end24.replace(":",""))
+      return _.inRange(time, truckInfo.start24.replace(":",""), truckInfo.end24.replace(":",""))
     });
-    return sortBy(foodTrucksOpenNow, 'applicant');
+    return _.sortBy(foodTrucksOpenNow, 'applicant');
   },
 
   printFoodTruckInfo:(foodTrucks) => {

@@ -11,3 +11,7 @@ Command line utility to get food trucks open at current time in SF
 
 3 - Run `node src/getFoodTruckInfo.js` terminal.
 
+
+## Pagination
+
+Press enter after every page to go to the next page.
